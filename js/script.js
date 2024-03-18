@@ -13,9 +13,12 @@
 // griglia 
 const grid = document.querySelector('#grid'); 
 // bottone cliccabile 
-const btn = document.querySelector('#play-button');
+const btnStart = document.querySelector('#play-button');
+const btnReset = document.querySelector('#reset-button');
+
 // popolo la glriglia con i quadrati
-btn.addEventListener('click', startGame);
+btnStart.addEventListener('click', startGame);
+btnReset.addEventListener('click', resetGame)
 const bombArray = [];
 console.log(bombArray);
 
@@ -54,7 +57,7 @@ function startGame() {
             if (bombArray.includes(thisNumber)){
                 this.classList.add('lose');
                 alert('hai perso il tuo punteggio è: ' + points);
-                resetGame();
+                
             }
             points++;
 
